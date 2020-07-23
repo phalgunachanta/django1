@@ -1,0 +1,30 @@
+{% extends 'cancer/index.html' %}
+
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-header">
+						Patient Registration
+						
+					</div>
+					<div class="card-body">
+						<form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+							{% csrf_token %}
+							{{form.as_p}}
+							<input type="submit" name="submit ">
+						</form>
+					</div>
+				</div>	
+
+			</div>	
+		</div>
+			
+	</div>	
+
+
+
+{% endblock %}

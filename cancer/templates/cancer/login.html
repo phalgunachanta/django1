@@ -1,0 +1,36 @@
+{% extends 'cancer/index.html' %}
+
+{% block body %}
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-header bg-success">login</div>
+
+				<div class="card-body">
+					<form action="{% url 'login' %}" method="POST">
+						{% csrf_token %}
+						USERNAME:<input type="text" name="username">
+						PASSWORD:<input type="text" name="password">
+						<input type="submit" name="submit">
+					</form>
+					
+							
+				</div>
+				<div class="card-footer bg-success">
+						 
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	</div>	
+
+</div>		
+{% endblock %}

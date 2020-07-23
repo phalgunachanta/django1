@@ -1,0 +1,12 @@
+{% extends 'cancer/index.html' %}
+
+{% block body %}
+
+	<div class="container">
+		<h1>welcome{{data.patient_name}}</h1>
+
+
+		<a href="{% url 'changepassword' %}"> changepassword</a>	
+	</div>
+	
+{% endblock %}		 

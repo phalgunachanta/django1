@@ -1,0 +1,44 @@
+{% extends 'cancer/index.html' %}
+
+{% block body %}
+	<div class="container">
+		 <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="bg-danger">name</th>
+        <th class="bg-danger">profile</th>
+        <th class="bg-danger">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+    	{% for i in data %}
+      <tr>
+        <td class="text-warning">{{i.patient_name}}</td>
+        <td><img class="rounded-circle" src="{{i.patient_image.url}}" height="70px" width="70px"></td>
+        <td class="text-success">{{i.patient_email}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+{% endblock %}
